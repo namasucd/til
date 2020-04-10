@@ -56,3 +56,13 @@ EOF
 - [WSL でマウントしたファイルシステムでもパーミッションを扱えるようにする - らくがきちょう](https://sig9.hatenablog.com/entry/2020/02/19/000000)
 - [umaskコマンドについて詳しくまとめました 【Linuxコマンド集】](https://eng-entrance.com/linux-command-umask)
 - [デフォルトのパーミッション設定： umask | 知識の箱](http://www.rivhiro-weather.com/knowledge/?p=168)
+
+# 直前のコミットを修正するgit commit --amend
+そのまんま。
+## 使いどころ
+- 一部のファイルをaddし忘れたとき
+- コミットメッセージを変更したいとき
+## ※リモートにpushした後に--amendしてはいけない!!
+リモートとの整合性が失われてしまうため
+## 参考
+- [git commit --amend で，ちょっとしたミスをしれっと直す - すこしふしぎ．](http://ism1000ch.hatenablog.com/entry/2014/03/26/190939)
