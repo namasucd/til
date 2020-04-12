@@ -66,3 +66,27 @@ EOF
 リモートとの整合性が失われてしまうため
 ## 参考
 - [git commit --amend で，ちょっとしたミスをしれっと直す - すこしふしぎ．](http://ism1000ch.hatenablog.com/entry/2014/03/26/190939)
+
+# Billboard Deviceとは、接続先のデバイスを正しく表示できなかった際の名前
+## USB Type-Cで追加された機能に関係したもの
+- USB Type-C(端子の規格) + USB3.1(通信の規格)で新しく追加された機能「USB PD」「Alternate Mode」
+- 「USB PD」 : 電源の規格。電源通信用の通信線を設けることで、最適化された電力のやり取りが可能になった
+- 「Aleternate Mode」 : USB Type-Cで追加された通信線を**USB以外の通信に使ってよい**という機能。これを利用することで、USB(Type-C)を映像出力等に利用できるようになった
+## 本題
+- Billboard Deviceは、接続先のデバイスが「Alternate Mode」に対応していないときに接続先となり、その旨を通知する機能を持つ
+- 「Aleternate Mode」に対応しているのは現状「DesignPort」「Thunderbolt3」くらい
+## ではなぜUSB Type-C ←→ HDMI の変換ケーブルが売られているのか、そしてちゃんと機能するのか
+宿題
+## 調べた背景
+1. HP ENVY x360をモニタにつないだらスリープから復帰しなくなるエラーが起きるようになった。  
+1. 通知領域を見ると「Billboard Device」なる見たことのないデバイスがつながっている。
+1. こいつが怪しい。
+1. デバイスマネージャでモニタとして検出されていたデバイスのドライバを見ると以下の2つ。
+    - 汎用PnPモニター
+    - AMD High Definition Audio Device
+1. 下はいらんやろ。余計なことしてそうだし。無効化！
+1. なおった。
+1. 「2. 3.」の過程はいらなかったけどせっかくだからまとめておこう。
+## 参考
+- [Type-Cデバイスのユーザー通知 ─ Billboardとは？ - Technical Direct](http://www.technical-direct.com/jp/typec_billboard/)
+- [USB Type-Cの機能やオルタネートモードを「わかりやすく」解説してみる - シュウジマブログ](https://www.shujima.work/entry/2018/12/08/011441)
