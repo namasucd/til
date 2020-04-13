@@ -89,4 +89,8 @@ EOF
 1. 「2. 3.」の過程はいらなかったけどせっかくだからまとめておこう。
 ## 参考
 - [Type-Cデバイスのユーザー通知 ─ Billboardとは？ - Technical Direct](http://www.technical-direct.com/jp/typec_billboard/)
-- [USB Type-Cの機能やオルタネートモードを「わかりやすく」解説してみる - シュウジマブログ](https://www.shujima.work/entry/2018/12/08/011441)
+- [USB Type-Cの機能やオルタネートモードを「わかりやすく」解説してみる - シュウジマブログ](https://www.shujima.work/entry/2018/12/08/011441)  
+## その後
+- スリープ後はシャットダウン。復帰しなくなるよりはましだが。。。  
+- 上述のAMD High Definition Audio Deviceが表示されなくなった。
+- Bluetoothとの相性も悪し。
