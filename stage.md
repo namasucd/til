@@ -7,7 +7,12 @@
 ## その他
 - linkなど
 
+<details><summary>
+
 # GitHubの認証をSSHに変えたら、git remote set-urlでリモートリポジトリのURLを修正すること
+
+</summary><div>
+
 ## HTTPS接続からSSH接続に変更したのに、push時にUsernameとPasswordを求められた
 - リモートリポジトリのurlがhttps://github.com/githubユーザ名/githubリポジトリ名.git
   - git remote -v で確認する
@@ -17,8 +22,14 @@
 ## 参考
 - [GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~ - Qiita](https://qiita.com/shizuma/items/2b2f873a0034839e47ce)
 - [githubを二段階認証に変更後に起こるエラーの対処方法 - Qiita](https://qiita.com/sayama0402/items/670b6b650ebdd8680a0b)
+</div></details>
+
+<details><summary>
 
 # プログラム開発の基本的な考え方
+
+</summary><div>
+
 ## フォルダ=プログラムの機能の単位
 - NPMなど、パッケージと呼ばれるものは、ソースファイルをまとめたフォルダを単位として機能を提供する。
 - package.jsonがその証左
@@ -26,8 +37,14 @@
 ## フォルダ=管理の単位
 - ルートディレクトリに`git init`することで、フォルダの変更履歴をまとめて管理できる
 - 同様に`code .`でまとまった編集を行う
+</div></details>
+
+<details><summary>
 
 # WSLでファイル操作するためにwsl.confでoption=metadataを指定する
+
+</summary><div>
+
 ## 通常、WSLからはマウントしたファイルを操作できない?
 1. WSL(Linux)ではファイルの読み込み(r)、書き込み(w)、実行(x)の3つをまとめてパーミッションと呼び、ファイルにmetadataとして関連付けて管理している
     - cf) パーミッション関連のコマンド
@@ -56,8 +73,14 @@ EOF
 - [WSL でマウントしたファイルシステムでもパーミッションを扱えるようにする - らくがきちょう](https://sig9.hatenablog.com/entry/2020/02/19/000000)
 - [umaskコマンドについて詳しくまとめました 【Linuxコマンド集】](https://eng-entrance.com/linux-command-umask)
 - [デフォルトのパーミッション設定： umask | 知識の箱](http://www.rivhiro-weather.com/knowledge/?p=168)
+</div></details>
+
+<details><summary>
 
 # 直前のコミットを修正するgit commit --amend
+
+</summary><div>
+
 そのまんま。
 ## 使いどころ
 - 一部のファイルをaddし忘れたとき
@@ -66,8 +89,14 @@ EOF
 リモートとの整合性が失われてしまうため
 ## 参考
 - [git commit --amend で，ちょっとしたミスをしれっと直す - すこしふしぎ．](http://ism1000ch.hatenablog.com/entry/2014/03/26/190939)
+</div></details>
+
+<details><summary>
 
 # Billboard Deviceとは、接続先のデバイスを正しく表示できなかった際の名前
+
+</summary><div>
+
 ## USB Type-Cで追加された機能に関係したもの
 - USB Type-C(端子の規格) + USB3.1(通信の規格)で新しく追加された機能「USB PD」「Alternate Mode」
 - 「USB PD」 : 電源の規格。電源通信用の通信線を設けることで、最適化された電力のやり取りが可能になった
@@ -94,3 +123,40 @@ EOF
 - スリープ後はシャットダウン。復帰しなくなるよりはましだが。。。  
 - 上述のAMD High Definition Audio Deviceが表示されなくなった。
 - Bluetoothとの相性も悪し。
+</div></details>
+
+<details><summary>
+
+# 見出し1の大きさのアコーディオンをつくりたい
+
+</summary><div>
+
+## サンプル
+- aaa
+  - bbb
+1. 1
+1. 2
+  1. 2-1
+  1. 2-2
+1. 3
+
+``` cmd
+$ echo コマンドとか
+```
+---
+## 書き方
+
+\<details>\<summary>
+
+\# ↑↓一行開けなければいけない。そもそも▼が上にずれる
+
+\</summary>\<div>
+
+\## 
+
+\</div>\</details>
+***
+- 「素早く構造化した文章がかける」というmarkdownの長所丸つぶれ
+- 長々と下に続けるべきではない?
+  - 目次を作るのは一つの手
+- __tilの整理術__
