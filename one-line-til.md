@@ -1,0 +1,5 @@
+- `$env:HOGE` powershellで環境変数を使う
+  - $HOGEのようにはできない
+  - $HOMEのみ例外でホームディレクトリに飛べる
+- vscodeの再起動は `ctrl + shift + P → Reload window`
+- `curl -H` でHTTPヘッダを指定できる
