@@ -160,3 +160,43 @@ $ echo コマンドとか
 - 長々と下に続けるべきではない?
   - 目次を作るのは一つの手
 - __tilの整理術__
+</div></details>
+
+
+
+<details><summary>
+
+# VSCodeで言語のスニペットを登録する
+</summary><div>
+
+ここではmarkdownにアコーディオン作成のスニペット追加する手順を例にする
+## markdown.jsonの作成
+- ファイル→ユーザー設定→ユーザースニペット→markdownで検索
+- markdown.jsonが開かれるので、以下の記述を追加する。
+```json
+"accordion": {                    #スニペット名
+  "prefix": "accordion",          #prefix 呼び出すための文字列
+  "body": ["<details><summary>",  #body 呼び出される文字列
+  "",                             #レイアウト崩れ防止のための空行。任意。
+  "$1",                           #'$1'を記述した場所にカーソル位置を指定可能
+  "</summary><div>",
+  "",                             #レイアウト崩れ防止のための空行。ほぼ必須
+  "$2",                           #カーソル位置は複数指定可能。Tabキーで次へ移動
+  "</div></details>",
+  ]
+},                                #複数登録はカンマ区切りで。jsonだもの
+```
+
+## settings.jsonの編集
+デフォルトではmarkdownファイルの編集時にスニペットが使えない設定になっているため、  
+settings.jsonに以下の記述を追加する
+```json
+"[markdown]": {
+    "editor.wordWrap": "on",            #折り返しをするか。デフォルトでon
+    "editor.quickSuggestions": true,    #ここがデフォルトでfalseになっているためスニペットが使えない
+    "editor.snippetSuggestions": "top", #お好み。スニペットが候補ボックスのどこに表示されるか。多分不要
+    "editor.suggest.showWords": false,  #お好み。falseにしないとファイル内のテキストを勝手に拾ってきてサジェストしてくるのでうっとうしい
+},
+```
+- settings.jsonで"markdown"と入力するといい感じに補完してくれる
+</div></details>
