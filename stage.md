@@ -200,3 +200,37 @@ settings.jsonに以下の記述を追加する
 ```
 - settings.jsonで"markdown"と入力するといい感じに補完してくれる
 </div></details>
+
+<details><summary>
+
+# windowsのカーネルではシングルクォーテーションが使えないのでエスケープが必要
+</summary><div>
+
+## powershellからcurlコマンドでJSONデータをポストしようとしたところ、下記エラーメッセージが返された。JSONの形式がおかしいらしい
+
+> message": "Bad credentials", "documentation_url": "https://docs.github.com/rest"
+
+## 対策  
+エスケープ文字を使いダブルクォーテーションを記述する
+``` powershell
+-d '"{\"query\": \"hogehoge\"}"'
+```  
+
+## 失敗した対策
+- `ConvertTo-Json` コマンドで作成したJSONオブジェクトをPOSTする
+``` powershell
+ -d (@{"query"="hogehoge"} | ConvertTo-Json) 
+```
+
+- 下記リンクにある外側をダブルクォーテーション、内側をシングルクォーテーションにする方法
+``` powershell
+ -d "{'query': 'hogehoge'}"
+```
+
+## 未検証の対策  
+- Invoke-RestMethod (powershell版curl)でPOSTする
+
+## 参考
+- [PowerShell でcurlを使いたい。JSONをエスケープせずに。 - Qiita](https://qiita.com/aoriso/items/a735f95e771f00825b3e)
+
+</div></details>
