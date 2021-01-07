@@ -232,5 +232,6 @@ settings.jsonに以下の記述を追加する
 
 ## 参考
 - [PowerShell でcurlを使いたい。JSONをエスケープせずに。 - Qiita](https://qiita.com/aoriso/items/a735f95e771f00825b3e)
+- [Invoke-RestMethod(PowerShell版のcUrl)でJsonをPOSTする - 明日の16時](https://itsumoonazicode.hatenablog.com/entry/20180827/1535298452)
 
 </div></details>
