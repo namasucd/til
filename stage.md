@@ -235,3 +235,9 @@ settings.jsonに以下の記述を追加する
 - [Invoke-RestMethod(PowerShell版のcUrl)でJsonをPOSTする - 明日の16時](https://itsumoonazicode.hatenablog.com/entry/20180827/1535298452)
 
 </div></details>
+
+<details><summary>windowsのエクスプローラからwslのディレクトリにアクセスする</summary><div>
+
+\\wsl$\Ubuntu
+
+</div></details>
