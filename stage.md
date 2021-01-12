@@ -241,3 +241,9 @@ settings.jsonに以下の記述を追加する
 \\wsl$\Ubuntu
 
 </div></details>
+
+<details><summary>wslとwindowsでgitの資格情報を共有する</summary><div>
+
+`git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"`
+
+</div></details>
