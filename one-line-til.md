@@ -3,3 +3,5 @@
   - $HOMEのみ例外でホームディレクトリに飛べる
 - vscodeの再起動は `ctrl + shift + P → Reload window`
 - `curl -H` でHTTPヘッダを指定できる
+- linuxでPATHの追加は`export PATH=$PATH:/mnt/c/Program\ Files/VSCode_x64/bin`
+  - 永続化するには ~/.profileにこの一文を追加する
