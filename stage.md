@@ -246,4 +246,7 @@ settings.jsonに以下の記述を追加する
 
 `git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"`
 
+※この設定をしてもwindows,wsl両方でgitのssh接続ができるようにはならなかった。  
+  何が悪かったのかは不明
+
 </div></details>
