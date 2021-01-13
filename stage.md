@@ -250,3 +250,56 @@ settings.jsonに以下の記述を追加する
   何が悪かったのかは不明
 
 </div></details>
+
+<details><summary>リモートリポジトリのデフォルトブランチを変更する</summary><div>
+
+## やったこと
+1. ローカルのブランチ名をmasterからmainに変更（済）
+1. リモートリポジトリのデフォルトブランチをmasterからmainに変更
+1. ローカルブランチからの追跡先をorigin/masterからorigin/mainに変更
+
+## リモートリポジトリのデフォルトブランチをmasterからmainに変更
+[masterからmainに変更する（githubのリモート＆ローカルブランチ） - Qiita](https://qiita.com/masakinihirota/items/1a657674e609be112fc6)
+
+## ローカルブランチからの追跡先をorigin/masterからorigin/mainに変更
+[masterからmainに変更する（githubのリモート＆ローカルブランチ） - Qiita](https://www.it-swarm-ja.tech/ja/git/%E3%81%AA%E3%81%9Cgit-branch-unsetupstream%E3%82%92%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%A6%E4%BF%AE%E6%AD%A3%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F/1043688761/)  
+- 念のため先に要らなくなった追跡先を追跡先を消しておく
+  `git branch --unset-upstream`
+
+
+## 以下変更履歴
+```
+/m/c/U/n/r/til ❯❯❯ git status
+On branch main
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+/m/c/U/n/r/til ❯❯❯ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/master
+/m/c/U/n/r/til ❯❯❯ git fetch -p
+/m/c/U/n/r/til ❯❯❯ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+/m/c/U/n/r/til ❯❯❯ git status
+On branch main
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+/m/c/U/n/r/til ❯❯❯ git branch --unset-upstream
+/m/c/U/n/r/til ❯❯❯ git branch --set-upstream-to=origin/main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+/m/c/U/n/r/til ❯❯❯ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+/m/c/U/n/r/til ❯❯❯ 
+```
+
+</div></details>
