@@ -5,3 +5,6 @@
 - `curl -H` でHTTPヘッダを指定できる
 - linuxでPATHの追加は`export PATH=$PATH:/mnt/c/Program\ Files/VSCode_x64/bin`
   - 永続化するには ~/.profileにこの一文を追加する
+  - zshの場合は~/.zprofile
+- `Get-Alias hoge`でPowserShellのエイリアス検索
+  - `-Definition`をつけるとエイリアス先(正式名称のほう)からエイリアスのリストを逆引き
