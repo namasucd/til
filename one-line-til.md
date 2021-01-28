@@ -8,3 +8,4 @@
   - zshの場合は~/.zprofile
 - `Get-Alias hoge`でPowserShellのエイリアス検索
   - `-Definition`をつけるとエイリアス先(正式名称のほう)からエイリアスのリストを逆引き
+- AndroidStudioでセットアップしたエミュレータの軌道に失敗するようになったら、Android StudioのAVD Managerで対象のデバイスを「Actions→Wipe Data」する
